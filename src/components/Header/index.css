@@ -1,0 +1,126 @@
+.header-bg-container {
+  padding: 10px 20px 10px 20px;
+}
+.header-title-menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-title-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  width: 55px;
+  height: 28px;
+  margin-right: 14px;
+}
+@media (min-width: 768px) {
+  .header-logo {
+    width: 59px;
+    height: 30px;
+  }
+}
+
+.header-title {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 18px;
+  color: #262626;
+}
+@media (min-width: 768px) {
+  .header-title {
+    font-size: 20px;
+  }
+}
+.header-menu-items {
+  margin-top: 10px;
+}
+@media (min-width: 768px) {
+  .header-menu-items {
+    display: none;
+  }
+}
+.header-menu-list-container {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-menu-list-item {
+  margin-right: 10px;
+  cursor: pointer;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  color: #262626;
+}
+@media (min-width: 768px) {
+  .header-menu-list-item {
+    margin-right: 20px;
+  }
+}
+.header-menu-list-item-button {
+  color: #fafafa;
+  background-color: #4094ef;
+  padding: 8px 24px 8px 24px;
+  border: none;
+  border-radius: 8px;
+}
+@media (min-width: 768px) {
+  .header-menu-icon {
+    display: none;
+  }
+}
+.header-largescreen-menu-list-container {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+@media (max-width: 768px) {
+  .header-largescreen-menu-list-container {
+    display: none;
+  }
+}
+.header-menu-search-container {
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background-color: #fafafa;
+  display: flex;
+
+  align-items: center;
+  width: 214px;
+  height: 28px;
+}
+@media (max-width: 768px) {
+  .header-menu-search-container {
+    width: 80%;
+    justify-content: right;
+    text-align: left;
+  }
+}
+.header-menu-search-input-field {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 14px;
+  color: #989898;
+  padding: 10px;
+}
+.header-search-menu-icon-conainer {
+  background-color: #dbdbdb;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+.header-search-menu-icon {
+  width: 10px;
+  height: 10px;
+}
+.list-item {
+  text-decoration: none;
+}

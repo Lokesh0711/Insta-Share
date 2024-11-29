@@ -1,0 +1,38 @@
+.loader-container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .went-wrong-image {
+    width: 260px;
+    height: 127px;
+  }
+}
+.went-wrong-text {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  color: #262626;
+}
+@media (min-width: 768px) {
+  .went-wrong-text {
+    font-size: 32px;
+  }
+}
+
+.try-again-button {
+  padding: 8px 24px 8px 24px;
+  color: #fafafa;
+  background-color: #4094ef;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .try-again-button {
+    padding: 12px 32px 12px 32px;
+  }
+}
