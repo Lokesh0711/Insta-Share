@@ -3,6 +3,7 @@ import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 
 import Header from '../Header'
+import ProfileGenerater from '../ProfileGenerater'
 
 import './index.css'
 
@@ -39,6 +40,7 @@ class MyProfile extends Component {
 
   profileDataFetched = profileDetails => {
     this.setState({profileDetails})
+    console.log(profileDetails)
   }
 
   renderLoader = () => (
@@ -62,7 +64,8 @@ class MyProfile extends Component {
   )
 
   render() {
-    const {isProfileLoading, dataFetchUncessful} = this.state
+    const {isProfileLoading, dataFetchUncessful, profileDetails} = this.state
+    const profileDetailsAvailable = profileDetails !== undefined
     return (
       <>
         <Header />
@@ -71,12 +74,10 @@ class MyProfile extends Component {
             {this.renderLoader()}
           </div>
         )}
-        {!dataFetchUncessful && (
+        {dataFetchUncessful && (
           <div className="loader-container">{this.renderProfileUnsucess()}</div>
         )}
-        <div>
-          <h1>MyProfile</h1>
-        </div>
+        {profileDetailsAvailable && <ProfileGenerater />}
       </>
     )
   }
