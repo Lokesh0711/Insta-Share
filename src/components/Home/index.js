@@ -81,8 +81,14 @@ class Home extends Component {
   )
 
   render() {
-    const {storiesData, isStoriesLoading, isPostsLoading, postsData} =
-      this.state
+    const {
+      storiesData,
+      isStoriesLoading,
+      isPostsLoading,
+      postsData,
+      postsDataFetchFailed,
+      storiesDataFetchFailed,
+    } = this.state
     const storiesDataAvailable = storiesData !== undefined
     const postsDataAvailable = postsData !== undefined
 
@@ -94,12 +100,30 @@ class Home extends Component {
           {storiesDataAvailable && (
             <StoriesGenerater storyDetails={storiesData} />
           )}
+          {storiesDataFetchFailed && (
+            <div className="">
+              <img src="" alt="failure view" />
+              <p className="">Something went wrong. Please try again</p>
+              <button type="button" onCilck={this.getStoriesData}>
+                Try Again
+              </button>
+            </div>
+          )}
           <hr className="story-line" />
           {isPostsLoading && <div testid="loader">{this.renderLoader()}</div>}
           {postsDataAvailable &&
             postsData.map(eachPost => (
               <PostsGenerater key={eachPost.post_id} postsDetails={eachPost} />
             ))}
+          {postsDataFetchFailed && (
+            <div className="">
+              <img src="" alt="failure view" />
+              <p className="">Something went wrong. Please try again</p>
+              <button type="button" onCilck={this.getPostsData}>
+                Try Again
+              </button>
+            </div>
+          )}
         </div>
       </>
     )

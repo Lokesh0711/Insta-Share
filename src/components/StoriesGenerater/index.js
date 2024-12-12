@@ -1,4 +1,6 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
+
 import Slider from 'react-slick'
 
 import './index.css'
@@ -48,12 +50,14 @@ class StoriesGenerater extends Component {
           }
           const {userId, storyUrl, userName} = eachStory
           return (
-            <div className="slick-item" key={userId}>
-              <div className="image-container">
-                <img className="logo-image" src={storyUrl} alt="user story" />
+            <Link to={`/users/${userId}`} key={userId} className="link">
+              <div className="slick-item">
+                <div className="image-container">
+                  <img className="logo-image" src={storyUrl} alt="user story" />
+                </div>
+                <p className="slick-user-name">{userName}</p>
               </div>
-              <p className="user-name">{userName}</p>
-            </div>
+            </Link>
           )
         })}
       </Slider>

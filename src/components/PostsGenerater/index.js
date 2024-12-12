@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import Cookies from 'js-cookie'
+import {Link} from 'react-router-dom'
 
 import {BsHeart} from 'react-icons/bs'
 import {FcLike} from 'react-icons/fc'
@@ -14,6 +15,7 @@ const PostsGenerater = props => {
   const {postsDetails} = props
   const post = {
     profilePic: postsDetails.profile_pic,
+    userId: postsDetails.user_id,
     userName: postsDetails.user_name,
     postImageUrl: postsDetails.post_details.image_url,
     postCaption: postsDetails.post_details.caption,
@@ -29,6 +31,7 @@ const PostsGenerater = props => {
   const {
     profilePic,
     userName,
+    userId,
     postImageUrl,
     postCaption,
     likesCount,
@@ -71,14 +74,16 @@ const PostsGenerater = props => {
 
   return (
     <div className="post-container">
-      <div className="post-profile-container">
-        <img
-          className="post-profile-pic"
-          src={profilePic}
-          alt="post author profile"
-        />
-        <p className="post-profile-name">{userName}</p>
-      </div>
+      <Link to={`/users/${userId}`} className="link">
+        <div className="post-profile-container">
+          <img
+            className="post-profile-pic"
+            src={profilePic}
+            alt="post author profile"
+          />
+          <p className="post-profile-name">{userName}</p>
+        </div>
+      </Link>
       <img className="post-image" src={postImageUrl} alt="post" />
       <div className="post-details-container">
         <div className="post-details-icons-container">

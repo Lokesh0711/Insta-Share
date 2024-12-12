@@ -1,0 +1,32 @@
+@media (min-width: 768px) {
+  .search-route-conatiner {
+    width: 80%;
+    margin: auto;
+  }
+}
+.no-search-conatiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.search-desk-view {
+  width: 258px;
+  height: 210px;
+}
+@media (min-width: 768px) {
+  .search-desk-view {
+    width: 500px;
+    height: 409px;
+  }
+}
+.no-search-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #262626;
+}
+.no-search-desc {
+  font-size: 16px;
+  font-weight: 400;
+  color: #989898;
+}

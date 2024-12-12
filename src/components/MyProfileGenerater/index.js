@@ -2,7 +2,7 @@ import {BsGrid3X3} from 'react-icons/bs'
 import {BiCamera} from 'react-icons/bi'
 import './index.css'
 
-const ProfileGenerater = props => {
+const MyProfileGenerater = props => {
   const {profileDetails} = props
 
   const updatedProfileDeatils = {
@@ -31,7 +31,7 @@ const ProfileGenerater = props => {
       <div className="profile-mobile-view">
         <h1 className="user-name">{userName}</h1>
         <div className="profile-pic-followers-details">
-          <img src={profilePic} alt="user profile" className="profile-pic" />
+          <img src={profilePic} alt="my profile" className="profile-pic" />
           <div className="followers-details-container">
             <p className="followers-count">{postsCount}</p>
             <p className="followers-desc">Posts</p>
@@ -49,7 +49,7 @@ const ProfileGenerater = props => {
         <p className="user-bio">{userBio}</p>
       </div>
       <div className="profile-desk-view">
-        <img src={profilePic} alt="user profile" className="profile-pic" />
+        <img src={profilePic} alt="my profile" className="profile-pic" />
 
         <div className="profile-pic-followers-details">
           <h1 className="user-name">{userName}</h1>
@@ -76,7 +76,7 @@ const ProfileGenerater = props => {
           <li className="storie-item" key={eachStorie.id}>
             <img
               src={eachStorie.image}
-              alt="user story"
+              alt="my story"
               className="storie-image"
             />
           </li>
@@ -92,11 +92,7 @@ const ProfileGenerater = props => {
           <ul className="post-list-container">
             {posts.map(eachPost => (
               <li className="post-list-item" key={eachPost.id}>
-                <img
-                  className="post-pic"
-                  alt="user post"
-                  src={eachPost.image}
-                />
+                <img className="post-pic" alt="my post" src={eachPost.image} />
               </li>
             ))}
           </ul>
@@ -114,4 +110,4 @@ const ProfileGenerater = props => {
   )
 }
 
-export default ProfileGenerater
+export default MyProfileGenerater

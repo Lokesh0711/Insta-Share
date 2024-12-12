@@ -13,6 +13,12 @@
   display: flex;
   justify-content: center;
 }
+@media (min-width: 768px) {
+  .logo-image {
+    width: 70px;
+    height: 70px;
+  }
+}
 .main-container {
   display: flex;
   flex-direction: column;
@@ -24,7 +30,7 @@
 .slick-next:before {
   color: black;
 }
-.user-name {
+.slick-user-name {
   font-family: 'Roboto';
   font-weight: 400;
   font-size: 14px;
@@ -33,7 +39,7 @@
 }
 .slick-item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

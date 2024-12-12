@@ -53,13 +53,13 @@ class Login extends Component {
         <img
           className="login-image"
           src="https://res.cloudinary.com/dicenbnxz/image/upload/v1732199614/insta-share/illustartion.jpg"
-          alt="illustartion"
+          alt="website login"
         />
         <div className="login-card">
           <img
             className="login-logo"
             src="https://res.cloudinary.com/dicenbnxz/image/upload/v1732199748/insta-share/logo.png"
-            alt="logo"
+            alt="website logo"
           />
           <h1 className="login-heading">Insta Share</h1>
           <form className="form-conatiner" onSubmit={this.onLoginClicked}>
