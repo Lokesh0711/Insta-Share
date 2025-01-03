@@ -226,18 +226,18 @@
   align-items: center;
   border-radius: 50%;
 }
-.no-post-image{
+.no-post-image {
   width: 48px;
   height: 45px;
 }
-.no-post-desc{
+.no-post-desc {
   color: #262626;
   font-family: 'Roboto';
   font-size: 18px;
   font-weight: 300;
 }
-@media (min-width: 768px){
-  .no-post-desc{
+@media (min-width: 768px) {
+  .no-post-desc {
     font-size: 32px;
   }
 }

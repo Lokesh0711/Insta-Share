@@ -55,7 +55,7 @@ const Header = props => {
           onClick={onClickMenu}
         />
         <ul className="header-largescreen-menu-list-container">
-          <li className="header-menu-list-item">
+          <li className="header-menu-list-item search-container">
             <div className="header-menu-search-container">
               <input
                 type="search"
@@ -63,18 +63,16 @@ const Header = props => {
                 placeholder="Search Caption"
                 onChange={onChangeSearch}
               />
-              <div className="header-search-menu-icon-conainer">
-                <Link to={`/search/${searchInput}`}>
-                  <button
-                    className="search-button"
-                    onClick={onClickSearch}
-                    type="button"
-                    testid="searchIcon"
-                  >
-                    <FaSearch />
-                  </button>
-                </Link>
-              </div>
+              <Link to={`/search/${searchInput}`}>
+                <button
+                  className="search-button header-search-menu-icon-conainer"
+                  onClick={onClickSearch}
+                  type="button"
+                  testid="searchIcon"
+                >
+                  <FaSearch />
+                </button>
+              </Link>
             </div>
           </li>
           <Link to="/" className="list-item">
@@ -132,18 +130,16 @@ const Header = props => {
               placeholder="Search Caption"
               onChange={onChangeSearch}
             />
-            <div className="header-search-menu-icon-conainer">
-              <Link to={`/search/${searchInput}`}>
-                <button
-                  className="search-button"
-                  onClick={onClickSearch}
-                  type="button"
-                  testid="searchIcon"
-                >
-                  <FaSearch />
-                </button>
-              </Link>
-            </div>
+            <Link to={`/search/${searchInput}`}>
+              <button
+                className="search-button"
+                onClick={onClickSearch}
+                type="button"
+                testid="searchIcon"
+              >
+                <FaSearch />
+              </button>
+            </Link>
           </div>
         )}
       </div>

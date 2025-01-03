@@ -73,56 +73,56 @@ const PostsGenerater = props => {
   }
 
   return (
-    <div className="post-container">
-      <Link to={`/users/${userId}`} className="link">
-        <div className="post-profile-container">
+    <div className='post-container'>
+      <Link to={`/users/${userId}`} className='link'>
+        <div className='post-profile-container'>
           <img
-            className="post-profile-pic"
+            className='post-profile-pic'
             src={profilePic}
-            alt="post author profile"
+            alt='post author profile'
           />
-          <p className="post-profile-name">{userName}</p>
+          <p className='post-profile-name'>{userName}</p>
         </div>
       </Link>
-      <img className="post-image" src={postImageUrl} alt="post" />
-      <div className="post-details-container">
-        <div className="post-details-icons-container">
+      <img className='post-image' src={postImageUrl} alt='post' />
+      <div className='post-details-container'>
+        <div className='post-details-icons-container'>
           {!postLiked && (
             <button
-              type="button"
-              className="post-details-icons"
-              testid="likeIcon"
+              type='button'
+              className='post-details-icons'
+              testid='likeIcon'
               onClick={onChangePostLikeStutes}
             >
-              <BsHeart className="icons" />
+              <BsHeart className='icons' />
             </button>
           )}
           {postLiked && (
             <button
-              type="button"
-              className="post-details-icons"
-              testid="unLikeIcon"
+              type='button'
+              className='post-details-icons'
+              testid='unLikeIcon'
               onClick={onChangePostLikeStutes}
             >
-              <FcLike className="icons" />
+              <FcLike className='icons' />
             </button>
           )}
-          <button type="button" className="post-details-icons">
-            <FaRegComment className="icons" />
+          <button type='button' className='post-details-icons'>
+            <FaRegComment className='icons' />
           </button>
-          <button type="button" className="post-details-icons">
-            <BiShareAlt className="icons" />
+          <button type='button' className='post-details-icons'>
+            <BiShareAlt className='icons' />
           </button>
         </div>
-        <p className="post-caption">{onSiteLikesCount} likes</p>
-        <p className="post-caption">{postCaption}</p>
+        <p className='post-caption'>{onSiteLikesCount} likes</p>
+        <p className='post-caption'>{postCaption}</p>
         {comments.map(eachComment => (
-          <p className="post-comment" key={eachComment.userId}>
-            <span className="comment-user-name">{eachComment.userName} </span>
+          <p className='post-comment' key={eachComment.userId}>
+            <span className='comment-user-name'>{eachComment.userName} </span>
             {eachComment.comment}
           </p>
         ))}
-        <p className="post-created-at">{createdAt}</p>
+        <p className='post-created-at'>{createdAt}</p>
       </div>
     </div>
   )

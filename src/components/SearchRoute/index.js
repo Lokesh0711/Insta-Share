@@ -7,7 +7,12 @@ import PostsGenerater from '../PostsGenerater'
 import './index.css'
 
 class SearchRoute extends Component {
-  state = {postsDetails: null, postsLength: null, isLoading: false}
+  state = {
+    postsDetails: null,
+    postsLength: null,
+    isLoading: false,
+    postsFetchFailed: false,
+  }
 
   componentDidMount() {
     this.getPostsDetails()
@@ -32,11 +37,13 @@ class SearchRoute extends Component {
     this.setState({isLoading: false})
     if (response.ok) {
       this.setState({postsDetails: data.posts, postsLength: data.posts.length})
+    } else {
+      this.setState({postsFetchFailed: true})
     }
   }
 
   render() {
-    const {postsDetails, postsLength, isLoading} = this.state
+    const {postsDetails, postsLength, isLoading, postsFetchFailed} = this.state
     const postsAvailable = postsDetails !== null
     const isGeaterThanZero = postsLength > 0 && postsAvailable
 
@@ -59,12 +66,26 @@ class SearchRoute extends Component {
               <img
                 className="search-desk-view"
                 src="https://res.cloudinary.com/dicenbnxz/image/upload/v1734040408/search-not-found-desk-view.png"
-                alt="failure view"
+                alt="search not found"
               />
               <h1 className="no-search-text">Search Not Found</h1>
               <p className="no-search-desc">
                 Try different keyword or search again
               </p>
+            </div>
+          )}
+          {postsFetchFailed && (
+            <div className="no-search-container">
+              <p className="no-search-desc">
+                Something went wrong. Please try again
+              </p>
+              <button
+                className="button"
+                type="button"
+                onClick={this.getPostsDetails()}
+              >
+                Try again
+              </button>
             </div>
           )}
         </div>
