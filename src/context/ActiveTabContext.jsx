@@ -2,7 +2,7 @@ import React from 'react'
 
 const ActiveTabContext = React.createContext({
   activeTab: 'Home',
-  changeActiveTab: () => {},
+  changeActive: () => {},
 })
 
 export default ActiveTabContext
